@@ -88,7 +88,7 @@ summary(mydata2)
 totalStepsaDay2 <- tapply(mydata2$steps, mydata2$date, sum)
 hist(totalStepsaDay2)
 
-meanTotStepsDay <- mean(TotalStepsaDay2, na.rm = TRUE)
+meanTotStepsDay <- mean(totalStepsaDay2, na.rm = TRUE)
 meanTotStepsDay
 
 medianTotStepsDay <- median(totalStepsaDay2, na.rm = TRUE)
