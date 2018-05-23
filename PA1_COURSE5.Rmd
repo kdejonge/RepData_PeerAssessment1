@@ -4,8 +4,6 @@ author: "K de Jonge"
 date: "May 23, 2018"
 output: html_document
 ---
-# "Reproducible Research: Peer Assessment 1"
-
 
 # Loading and preprocessing the data
 
