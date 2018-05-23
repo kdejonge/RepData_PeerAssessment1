@@ -29,7 +29,7 @@ TotalStepsaDay <- tapply(mydata$steps, mydata$date, sum)
 hist(TotalStepsaDay)
 ```
 
-
+![plot of chunk Rplot1](figure/Rplot1.png) 
 
 
 ## Mean total steps a day
@@ -38,12 +38,14 @@ hist(TotalStepsaDay)
 meanTotStepsDay <- mean(TotalStepsaDay, na.rm = TRUE)
 meanTotStepsDay
 ```
+### Mean: [1] 10766.19
 
 ## Median total steps a day
 ```{r mediantotalsteps, echo=TRUE}
 medianTotStepsDay <- median(TotalStepsaDay, na.rm = TRUE)
 medianTotStepsDay
 ```
+### Median: [1] 10765
 
 # What is the average daily activity pattern?
 
@@ -54,11 +56,14 @@ summary(avgDailActPatt)
 plot(avgDailActPatt[, 1], avgDailActPatt[, 2], type = "l", xlab = "5 min Intervals in a day", ylab = "Average Number of Steps", main = "The Average Daily Activity Pattern")
 ```
 
+![plot of chunk Rplot2](figure/Rplot2.png) 
+
 ## The 5-minute interval across all days which contains the maximum number of steps
 ```{r maxStepsInterval, echo=TRUE}
 maxStepsIntervalTime <- avgDailActPatt[which.max(avgDailActPatt[, 2]), 1]
 maxStepsIntervalTime
 ```
+### Max Steps interval: [1] 835
 
 # Missing values
 
@@ -90,12 +95,17 @@ summary(mydata2)
 totalStepsaDay2 <- tapply(mydata2$steps, mydata2$date, sum)
 hist(totalStepsaDay2)
 
+![plot of chunk Rplot3](figure/Rplot3.png) 
+
 meanTotStepsDay <- mean(TotalStepsaDay2, na.rm = TRUE)
 meanTotStepsDay
 
 medianTotStepsDay <- median(totalStepsaDay2, na.rm = TRUE)
 medianTotStepsDay
 ```
+
+### Mean: [1] 10766
+### Media: [1] 10766
 
 # Are there differences in activity patterns between weekdays and weekends?
 
@@ -134,4 +144,4 @@ avgPatt <- rbind(avgWeekdayPatt, avgWeekendPatt)
 library(lattice)
 xyplot(steps ~ interval | dayTag, data = avgPatt, type = "l", layout = c(1, 2))
 ```
-
+![plot of chunk Rplot4](figure/Rplot4.png) 
