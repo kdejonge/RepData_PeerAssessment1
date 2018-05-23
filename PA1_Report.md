@@ -29,7 +29,7 @@ TotalStepsaDay <- tapply(mydata$steps, mydata$date, sum)
 hist(TotalStepsaDay)
 ```
 
-![plot of chunk Rplot1](figure/Rplot1.png) 
+![plot of chunk Rplot1](instructions_fig/Rplot1.png) 
 
 
 ## Mean total steps a day
@@ -56,7 +56,7 @@ summary(avgDailActPatt)
 plot(avgDailActPatt[, 1], avgDailActPatt[, 2], type = "l", xlab = "5 min Intervals in a day", ylab = "Average Number of Steps", main = "The Average Daily Activity Pattern")
 ```
 
-![plot of chunk Rplot2](figure/Rplot2.png) 
+![plot of chunk Rplot2](instructions_fig/Rplot2.png) 
 
 ## The 5-minute interval across all days which contains the maximum number of steps
 ```{r maxStepsInterval, echo=TRUE}
@@ -95,7 +95,7 @@ summary(mydata2)
 totalStepsaDay2 <- tapply(mydata2$steps, mydata2$date, sum)
 hist(totalStepsaDay2)
 
-![plot of chunk Rplot3](figure/Rplot3.png) 
+![plot of chunk Rplot3](instructions_fig/Rplot3.png) 
 
 meanTotStepsDay <- mean(TotalStepsaDay2, na.rm = TRUE)
 meanTotStepsDay
@@ -144,4 +144,4 @@ avgPatt <- rbind(avgWeekdayPatt, avgWeekendPatt)
 library(lattice)
 xyplot(steps ~ interval | dayTag, data = avgPatt, type = "l", layout = c(1, 2))
 ```
-![plot of chunk Rplot4](figure/Rplot4.png) 
+![plot of chunk Rplot4](instructions_fig/Rplot4.png) 
