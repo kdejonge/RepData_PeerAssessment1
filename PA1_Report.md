@@ -71,6 +71,7 @@ maxStepsIntervalTime
 summary(data)
 sum(!complete.cases(data))
 ```
+### Missing values 2304
 
 ## Fill missing values with the mean
 
