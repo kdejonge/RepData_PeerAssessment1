@@ -63,7 +63,7 @@ plot(avgDailActPatt[, 1], avgDailActPatt[, 2], type = "l", xlab = "5 min Interva
 maxStepsIntervalTime <- avgDailActPatt[which.max(avgDailActPatt[, 2]), 1]
 maxStepsIntervalTime
 ```
-### Max Steps interval: [1] 835
+### Max Steps interval: [1] 835  > 8.35 am
 
 # Missing values
 
@@ -105,7 +105,7 @@ medianTotStepsDay
 ```
 
 ### Mean: [1] 10766
-### Media: [1] 10766
+### Median: [1] 10766
 
 # Are there differences in activity patterns between weekdays and weekends?
 
